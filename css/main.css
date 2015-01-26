@@ -5,6 +5,14 @@ ul, li {
 body {
   background:#f6f6f6;
   font-family:"Georgia", serif;
+  font-size: 1em;
+  line-height: 1.4;
+  color: #666;
+}
+::selection {
+  background: #666;
+  color: #fff;
+  text-shadow: none;
 }
 .wrapper {
   position:relative;
