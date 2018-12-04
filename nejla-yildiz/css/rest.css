@@ -1,0 +1,143 @@
+html {
+  color: #1b1b1b;
+}
+
+h3, h4 {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:hover {
+  color: #768b9a;
+}
+
+a[rel="external"] {
+  border-bottom: 1px dotted;
+}
+
+b {
+  font-weight: bolder;
+}
+
+section:not(:first-child):before,
+small {
+  display: block;
+  font-size: 80%;
+  padding: 20px 0;
+  text-align: center;
+  background: #768b9a;
+  color: #fff;
+  margin: 0 -40px;
+}
+
+#home,
+[data-page="about"] #about,
+[data-page="services"] #services,
+[data-page="contact"] #contact {
+  display: block;
+  visibility: visible;
+}
+
+[data-page="about"] #home,
+[data-page="services"] #home,
+[data-page="contact"] #home {
+  display: none;
+  visibility: hidden;
+}
+
+section {
+  display: none;
+  visibility: hidden;
+  padding-bottom: 20px;
+}
+
+section:not(:first-child):before {
+  content: "\00A7";
+  left: 0;
+  right: 0;
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
+
+.inline,
+section p,
+section h2,
+section ul,
+ol {
+  margin-bottom: 20px;
+}
+
+section p,
+section ul,
+dl,
+ol {
+  line-height: 1.35;
+}
+
+ol,
+section ul {
+  padding-left: 1em;
+}
+
+.columns {
+  columns: 20px 2;
+}
+
+.inline dt,
+.inline dd {
+  display: inline;
+}
+
+.quote {
+  margin-bottom: 40px;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 3em;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+@media (max-width: 960px) {
+  .columns {
+    columns: auto auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .column {
+    display: block;
+  }
+
+  .phone {
+    display: none;
+  }
+}
