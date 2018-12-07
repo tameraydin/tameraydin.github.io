@@ -2,17 +2,33 @@ html {
   color: #1b1b1b;
 }
 
-h3, h4 {
+h3, [role="heading"] {
   margin: 0 0 20px;
   padding: 0;
+}
+
+[role="heading"] {
+  display: block;
+  font-weight: bold;
 }
 
 a {
   background-color: transparent;
 }
 
-a:hover {
+a:hover,
+[tabindex]:hover {
   color: #768b9a;
+}
+
+[tabindex] {
+  cursor: pointer;
+  outline: 0;
+}
+
+[tabindex] h3:before,
+[tabindex] [role="heading"]:before {
+  content: "\025B8\000A0";
 }
 
 a[rel="external"] {
@@ -151,4 +167,25 @@ dd {
   .phone {
     display: none;
   }
+}
+
+[type="checkbox"] {
+  display: none;
+  visibility: hidden;
+}
+
+.toggle {
+  position: absolute;
+  z-index: -1;
+  opacity: .01;
+  height: 1px;
+  overflow: hidden;
+}
+
+[type="checkbox"]:checked + .toggle {
+  position: static;
+  z-index: 0;
+  opacity: .99;
+  height: auto;
+  overflow: visible;
 }
